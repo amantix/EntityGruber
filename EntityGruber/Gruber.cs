@@ -74,6 +74,8 @@ namespace EntityGruber
                 new Order {Amt = 1200, Customer = c2, Salesperson = s3, Odate = new DateTime(2016, 11, 5)},
             };
             context.Orders.AddRange(o);
+            context.SaveChanges();
+
         }
     }
 
