@@ -10,6 +10,11 @@ namespace EntityGruber
     {
         static void Main(string[] args)
         {
+            using (var db = new GruberContext())
+            {
+                db.Customers.Add(new Customer {Cnum = 1, City = "London", Cname = "John", Rating = 100});
+                db.SaveChanges();
+            }
         }
     }
 }
