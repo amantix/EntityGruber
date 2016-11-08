@@ -81,6 +81,10 @@ namespace EntityGruber
 
     public class GruberContext: DbContext
     {
+        static GruberContext()
+        {
+            Database.SetInitializer<GruberContext>(new GruberContextInitializer());
+        }
         public GruberContext()
             :base("EntityGruber")
         {}
