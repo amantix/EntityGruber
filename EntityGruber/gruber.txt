@@ -1,0 +1,75 @@
+/*
+CREATE TABLE Salespeople(
+Snum INT,
+Sname VARCHAR(30),
+City VARCHAR(15),
+Comm DECIMAL(3,2));
+
+CREATE TABLE Customers(
+Cnum INT,
+Cname VARCHAR(30),
+City VARCHAR(15),
+Rating INT,
+Snum INT);
+
+CREATE TABLE Orders (
+Onum INT,
+Odate DATE,
+Amt DECIMAL(14,2),
+Snum INT,
+Cnum INT);
+*/
+
+
+
+delete from Salespeople;
+INSERT INTO Salespeople(Snum, Sname, City, Comm)
+values(1001, 'Peel', 'London', 0.12);
+INSERT INTO Salespeople(Snum, Sname, City, Comm)
+values(1002, 'Serres', 'San Jose', 0.13);
+INSERT INTO Salespeople(Snum, Sname, City, Comm)
+values(1004, 'Motika', 'London', 0.11);
+INSERT INTO Salespeople(Snum, Sname, City, Comm)
+values(1007, 'Rifkin', 'Barcelona', 0.15);
+INSERT INTO Salespeople(Snum, Sname, City, Comm)
+values(1003, 'Axelrod', 'New York', 0.10);
+
+
+delete from Customers;
+insert into Customers(Cnum, Cname,City,Rating, Snum)
+values(2001, 'Hoffman', 'London', 100, 1001);
+insert into Customers(Cnum, Cname,City,Rating, Snum)
+values(2002, 'Giovanni', 'Rome', 200, 1003);
+insert into Customers(Cnum, Cname,City,Rating, Snum)
+values(2003, 'Liu', 'San Jose', 200, 1002);
+insert into Customers(Cnum, Cname,City,Rating, Snum)
+values(2004, 'Grass', 'Berlin', 300, 1002);
+insert into Customers(Cnum, Cname,City,Rating, Snum)
+values(2006, 'Clemens', 'London', 100, 1001);
+insert into Customers(Cnum, Cname,City,Rating, Snum)
+values(2008, 'Cisneros', 'San Jose', 300, 1007);
+insert into Customers(Cnum, Cname,City,Rating, Snum)
+values(2007, 'Pereira', 'Rome', 100,1004);
+
+
+delete from Orders;
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3001, 18.69, '03.10.2015', 2008, 1007);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3003, 767.19, '03.10.2015', 2001, 1001);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3002, 1900.10, '03.10.2015', 2007, 1004);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3005, 5160.45, '03.10.2015', 2003, 1002);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3006, 1098.16, '03.10.2015', 2008, 1007);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3009, 1713.23, '04.10.2015', 2002, 1003);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3007, 75.75, '04.10.2015', 2004, 1002);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3008, 4723.00, '05.10.2015', 2006, 1001);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3010, 1309.95, '06.10.2015', 2004, 1002);
+insert into Orders(Onum, Amt, Odate, Cnum, Snum)
+values(3011, 9891.88, '06.10.2015', 2006, 1001);

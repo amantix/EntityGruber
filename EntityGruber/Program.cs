@@ -19,9 +19,9 @@ namespace EntityGruber
 
 
                 var c1 =db.Customers.Where(x => x.Orders.Count > 1);
-                foreach (var c in c1)
+                foreach (var c in db.Salespeople)
                 {
-                    Console.WriteLine($"{c.Cname} {c.City} {c.Rating}");
+                    Console.WriteLine($"{c.Snum} {c.City} {c.Comm}");
                 }
 
                 // Вывести имена покупателей 
@@ -33,7 +33,7 @@ namespace EntityGruber
                     select new {o.Customer.Cname, o.Amt, o.Odate};
 
 
-                //var c3 = db.Database.SqlQuery<string>("Select cname from Customers");
+                //var c3 = db.Database.SqlQuery<string>("Select Cname from Customers");
 
                 foreach (var c in c2)
                 {
